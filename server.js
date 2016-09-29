@@ -17,6 +17,28 @@ var articleone={
                 <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
                 </p>`
 };
+var articletwo={
+    title:'Article two',
+    heading:'Article two',
+    date:'sep10,2016',
+    content:`<p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle               oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle            oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>
+                <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>
+                <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>`
+};
+var articlethree={
+    title:'Article Three',
+    heading:'Article Three',
+    date:'sep15,2016',
+    content:`<p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle               oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle            oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>
+                <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>
+                <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
+                </p>`
+};
 function createTemplate(data){
     var title= data.title;
     var heading = data.heading;
@@ -82,11 +104,13 @@ app.get('/article-one',function(req,res){
 }
 );
 app.get('/article-two',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
+   res.send(createTemplate(articletwo));
+}
+);
 app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+   res.send(createTemplate(articlethree));
+}
+);
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
