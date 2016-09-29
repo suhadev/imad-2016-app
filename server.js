@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
- articleone:{
+ 'article-one':{
     title:'Article one',
     heading:'Article one',
     date:'sep5,2016',
@@ -17,7 +17,7 @@ var articles={
                 <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
                 </p>`
 },
- articletwo:{
+ 'article-two':{
     title:'Article two',
     heading:'Article two',
     date:'sep10,2016',
@@ -28,7 +28,7 @@ var articles={
                 <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
                 </p>`
 },
- articlethree:{
+ 'article-three':{
     title:'Article Three',
     heading:'Article Three',
     date:'sep15,2016',
@@ -38,7 +38,7 @@ var articles={
                 </p>
                 <p>Article oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle oneArticle one
                 </p>`
-},
+}
 };
 function createTemplate(data){
     var title= data.title;
@@ -102,7 +102,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/:articlename',function(req,res){
     var articlename=req.params.articlename;
-    res.send(createTemplate(articles.articlename));
+    res.send(createTemplate(articles[articlename]));
 }
 );
 
