@@ -61,6 +61,7 @@ function createTemplate(data){
         
         
     `;
+    return template;
 }
 
 
