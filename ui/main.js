@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 var image=document.getElementById("img");
 var marginLeft=0;
 function moveRight(){
@@ -9,4 +9,9 @@ function moveRight(){
 image.onclick=function(){
    
    setInterval(moveRight,50);
-};
+};*/
+var counter=0;
+var button=document.getElementById("count");
+button.onclick=function(){
+    counter=counter+1;
+}
