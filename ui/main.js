@@ -12,7 +12,9 @@ image.onclick=function(){
 };*/
 var counter=0;
 var button=document.getElementById("count");
-button.onclick=function(){
+console.log("button identified");
+button.onclick = function(){
+    console.log("button clicked");
     counter = counter + 1;
     var span=document.getElementById("counter");
     span.innerHTML=counter.toString();
