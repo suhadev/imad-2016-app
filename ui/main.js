@@ -13,7 +13,8 @@ image.onclick=function(){
 var counter=0;
 var button=document.getElementById('count');
 console.log("button identified");
-button.onclick= alert("hello");
+button.onclick = alert("hello");
+
 /*button.onclick = function(){
     console.log("button clicked");
     counter = counter + 1;
