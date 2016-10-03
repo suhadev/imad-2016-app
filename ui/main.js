@@ -26,6 +26,7 @@ var nameInput=document.getElementById("input");
 var nameEntered=nameInput.value;
 var submit=document.getElementById("submitbtn");
 submit.onclick=function(){
+    alert("a");
     var names=["name1","name2","name3"];
     var list="";
     for(var i=0;i<=names.length;i++){
